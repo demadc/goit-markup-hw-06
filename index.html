@@ -380,7 +380,46 @@
 					<use href="./images/sprite.svg#icon-close-black"></use>
 				</svg>
 				</button>
-
+				<h3 class="modal-title">Leave your contacts and we will call you back</h3>
+			
+				<form class="modal-form form">
+					<div class="modal-form-field">
+						<label for="name" class="form-label">Name</label>
+						<input type="text" name="user_name" id="name" class="form-input">
+						<svg class="form-icon" width="18px" height="24px">
+							<use href="./images/sprite.svg#icon-contact"></use>
+						</svg>
+					</div>
+					
+					<div class="modal-form-field">
+						<label for="tel" class="form-label">Phone</label>
+						<input type="tel" name="user-tel" id="tel" class="form-input">
+						<svg class="form-icon" width="18px" height="24px">
+							<use href="./images/sprite.svg#icon-tel"></use>
+						</svg>
+					</div>
+					
+					<div class="modal-form-field">
+						<label for="mail" class="form-label">Email</label>
+						<input type="mail" name="user_mail" id="mail" class="form-input">
+						<svg class="form-icon" width="18px" height="24px">
+							<use href="./images/sprite.svg#icon-mail"></use>
+						</svg>
+					</div>
+					<div class="modal-form-field-msg">
+						<label for="comment" class="form-label">Comment</label>
+						<textarea name="user_message" class="modal-form-msg" id="comment" placeholder="Text input"></textarea>
+					</div>
+					
+					<div class="modal-form-policy">
+						<input type="checkbox" name="policy" id="policy">
+						<label for="policy">I accept the terms and conditions of the Privacy Policy</label>
+					</div>
+					
+					
+					<button type="submit" class="modal-form-btn"><span class="modal-form-btn-text">Send</span></button>
+				</form>
+			
 			</div>
 		</div>
 
