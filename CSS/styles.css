@@ -704,7 +704,7 @@ address {
 	fill: var(--primary-brand);
 }
 .form-label-field {
-	margin-bottom: 16px;
+	margin-bottom: 12px;
 }
 .textarea-desc {
 	display: block;
@@ -750,10 +750,13 @@ address {
 
 	color: #8e8f99;
 }
-.policy-checkbox {
-	appearance: none;
-}
 
+.form-label-policy {
+	display: flex;
+	align-items: center;
+	gap: 6px;
+	margin-bottom: 8px;
+}
 .form-label-policy::before {
 	content: "";
 	display: inline-block;
@@ -768,11 +771,10 @@ address {
 }
 
 .policy-checkbox:checked + .form-label-policy::before {
-	background-image: url(./image/);
-	background-repeat: ;
-	background-size: ;
+	background-image: url(../images/wite_checkbox.svg);
+	background-repeat: no-repeat;
+	background-size: contain;
 	background-color: var(--button-active);
-
 	border: 1px solid var(--button-active);
 }
 
