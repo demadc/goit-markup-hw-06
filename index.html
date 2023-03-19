@@ -373,53 +373,61 @@
 
 		<!--MODAL-->
 		
-		<div class="backdrop is-hidden" data-modal>
+		<div class="backdrop " data-modal>
 			<div class="modal">
 				<button type="button" class="modal-close-btn" data-modal-close>
 				<svg class="modal-close-btn-icon" width="8" height="8">
 					<use href="./images/sprite.svg#icon-close-black"></use>
 				</svg>
 				</button>
-				<h3 class="modal-title">Leave your contacts and we will call you back</h3>
+				<p class="modal-title">Leave your contacts and we will call you back</p>
 			
-				<form class="modal-form form">
-					<div class="modal-form-field">
+				<form class="modal-form form" >
+
+					<div class="form-field">
 						<label for="name" class="form-label">Name</label>
-						<input type="text" name="user_name" id="name" class="form-input">
-						<svg class="form-icon" width="18px" height="24px">
-							<use href="./images/sprite.svg#icon-contact"></use>
-						</svg>
+						<div class="form-input-icon-field">
+							<input type="text" name="user_name" id="name" class="form-input" required pattern="[a-zA-Zа-яА-ЯїЇіІ]+" minlength="2">
+							<svg class="form-input-icon" width="18px" height="24px">
+								<use href="./images/sprite.svg#icon-contact"></use>
+							</svg>
+						</div>	
 					</div>
 					
-					<div class="modal-form-field">
+					<div class="form-field">
 						<label for="tel" class="form-label">Phone</label>
-						<input type="tel" name="user-tel" id="tel" class="form-input">
-						<svg class="form-icon" width="18px" height="24px">
-							<use href="./images/sprite.svg#icon-tel"></use>
-						</svg>
+						<div class="form-input-icon-field">
+							<input type="tel" name="user_phone" id="tel" class="form-input" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}" title="xxx-xxx-xx-xx">
+							<svg class="form-input-icon" width="18px" height="24px">
+								<use href="./images/sprite.svg#icon-tel"></use>
+							</svg>
+						</div>						
 					</div>
 					
-					<div class="modal-form-field">
+					<div class="form-field">
 						<label for="mail" class="form-label">Email</label>
-						<input type="mail" name="user_mail" id="mail" class="form-input">
-						<svg class="form-icon" width="18px" height="24px">
-							<use href="./images/sprite.svg#icon-mail"></use>
-						</svg>
-					</div>
-					<div class="modal-form-field-msg">
-						<label for="comment" class="form-label">Comment</label>
-						<textarea name="user_message" class="modal-form-msg" id="comment" placeholder="Text input"></textarea>
+						<div class="form-input-icon-field">
+							<input type="mail" name="user_mail" id="mail" class="form-input" required>
+							<svg class="form-input-icon" width="18px" height="24px">
+								<use href="./images/sprite.svg#icon-mail"></use>
+							</svg>
+						</div>
+					</div>	
+						
+					<label class="form-label-field">
+						<span class="textarea-desc">Comment</span>
+						<textarea name="user_message" class="modal-form-msg" placeholder="Text input"></textarea>
+					</label>
+						
+					<div class="form-field-checkbox">
+						<input type="checkbox" name="policy" id="policy" class="policy-checkbox ">
+						<label class="form-label-policy" for="policy">I accept the terms and conditions of the 
+							<a href="">Privacy Policy</a>
+						</label>
 					</div>
 					
-					<div class="modal-form-policy">
-						<input type="checkbox" name="policy" id="policy">
-						<label for="policy">I accept the terms and conditions of the Privacy Policy</label>
-					</div>
-					
-					
-					<button type="submit" class="modal-form-btn"><span class="modal-form-btn-text">Send</span></button>
-				</form>
-			
+					<button type="submit" class="modal-form-btn">Send</button>				
+				</form>	
 			</div>
 		</div>
 
