@@ -494,7 +494,6 @@ address {
 
 .footer-container {
 	display: flex;
-	gap: 120px;
 }
 
 .footer-logo {
@@ -513,6 +512,9 @@ address {
 	color: var(--primary-brand);
 }
 
+.moto {
+	margin-right: 120px;
+}
 .footer-text {
 	width: 264px;
 
@@ -533,9 +535,14 @@ address {
 	color: var(--white-text-color);
 }
 
+.footer-social-media {
+	margin-right: 80px;
+}
+
 .social-media-list {
 	display: flex;
 	justify-content: space-between;
+	gap: 16px;
 }
 
 .social-media-item {
@@ -553,7 +560,7 @@ address {
 }
 
 .social-media-item:hover,
-.social-media-item:focus {
+.social-media-link:focus {
 	background-color: var(--success);
 }
 
@@ -564,6 +571,8 @@ address {
 .footer-form-subtitle {
 	width: 453px;
 
+	margin-bottom: 16px;
+
 	font-weight: 500;
 	font-size: 16px;
 	line-height: 1.5;
@@ -573,22 +582,16 @@ address {
 
 .form-footer {
 	display: flex;
-	position: absolute;
-	top: 50%;
-	left: 0;
-	transform: translateY(-50%);
-	width: 453px;
+	justify-content: space-between;
 }
 
 .footer-subsc-input {
 	width: 264px;
 	height: 40px;
-	margin-right: 24px;
+
 	outline: none;
 
-	padding-left: 16px;
-	padding-top: 8px;
-	padding-bottom: 8px;
+	padding: 8px 16px;
 
 	font-weight: 400;
 	font-size: 12px;
@@ -602,6 +605,13 @@ address {
 	color: #ffffff;
 }
 
+.footer-subsc-input:hover,
+.footer-subsc-input:focus {
+	background-color: var(--success);
+	border-color: tomato;
+	transition: background-color var(--timing-function);
+}
+
 .footer-subsc-input::placeholder {
 	color: #ffffff;
 }
@@ -610,15 +620,26 @@ address {
 	position: relative;
 	width: 165px;
 	height: 40px;
+	padding: 0;
 
+	border: 1px solid var(--primary-brand);
 	background-color: var(--primary-brand);
 	border-radius: 4px;
 }
 
+.contact-form-btn:hover,
+.contact-form-btn:focus {
+	background-color: var(--button-active);
+	border-color: var(--success);
+	transition: background-color var(--timing-function);
+	outline: none;
+}
+
 .footer-form-btn-text {
-	position: absolute;
-	top: 8px;
-	left: 24px;
+	padding-top: 8px;
+	padding-left: 24px;
+	padding-bottom: 8px;
+	padding-right: 16px;
 
 	font-weight: 500;
 	font-size: 16px;
@@ -658,12 +679,13 @@ address {
 }
 
 .modal {
-	position: relative;
+	position: absolute;
 	top: 50%;
 	left: 50%;
 
 	width: 408px;
 	height: 576px;
+	padding: 72px 24px 24px;
 	transform: translate(-50%, -50%);
 
 	background-color: var(--modal-bg);
@@ -705,31 +727,22 @@ address {
 }
 
 .modal-title {
-	padding-top: 72px;
-	padding-left: 24px;
-	padding-right: 24px;
-
 	font-weight: 500;
 	font-size: 16px;
 	line-height: 1.5;
 	text-align: center;
 
+	margin-bottom: 16px;
+
 	color: var(--dark);
 }
 
 .form {
-	position: absolute;
 	display: flex;
 	flex-direction: column;
-
-	width: 100%;
-
-	padding: 24px 24px;
 }
 
 .form-field {
-	width: 360px;
-	height: 58px;
 	margin-bottom: 8px;
 }
 .form-input-icon-field {
@@ -755,7 +768,7 @@ address {
 	line-height: 1.17;
 	letter-spacing: 0.01em;
 
-	border: 1px solid var(--dark);
+	border: 1px solid var(--subtle-text);
 	border-radius: 4px;
 	transition: border-color var(--timing-function);
 }
@@ -766,7 +779,6 @@ address {
 .form-input-icon {
 	position: absolute;
 	top: 50%;
-	left: 0%;
 	transform: translateY(-50%);
 
 	left: 16px;
@@ -819,6 +831,7 @@ address {
 	line-height: 1.17;
 	letter-spacing: 0.04em;
 
+	margin-bottom: 16px;
 	color: #8e8f99;
 }
 
@@ -826,8 +839,6 @@ address {
 	display: flex;
 	align-items: center;
 	justify-content: space-evenly;
-
-	margin-bottom: 8px;
 }
 
 .form-label-policy::before {
@@ -853,6 +864,8 @@ address {
 	background-color: var(--button-active);
 	background-position: center;
 	border: 1px solid var(--button-active);
+
+	transition: background-image var(--timing-function);
 }
 
 .modal-form-btn {
@@ -862,7 +875,7 @@ address {
 	width: 169px;
 	height: 56px;
 
-	background: #4d5ae5;
+	background: var(--primary-brand);
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 	border-radius: 4px;
 	color: #ffffff;
@@ -871,6 +884,7 @@ address {
 .modal-form-btn:hover,
 .modal-form-btn:focus {
 	background-color: var(--button-active);
+	transition: background-color var(--timing-function);
 }
 
 /* ------------------/MODAL------------------- */
